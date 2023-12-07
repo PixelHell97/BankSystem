@@ -1,15 +1,15 @@
 package BankSys;
 
-import java.util.Vector;
+import java.io.IOException;
 
-public interface DataSourceInterface {
-    void addClient(Client client);
-    void addEmployee(Employee employee);
-    void addAdmin(Admin admin);
-    Vector<Client> getAllClients();
-    Vector<Employee> getAllEmployees();
-    Vector<Admin> getAllAdmins();
-    void removeAllClients();
-    void removeAllEmployees();
-    void removeAllAdmins();
+interface DataSourceInterface {
+    void addClient(Client client) throws IOException;
+    void addEmployee(Employee employee) throws IOException;
+    void addAdmin(Admin admin) throws IOException;
+    void getAllClients() throws IOException;
+    void getAllEmployees() throws IOException;
+    void getAllAdmins() throws IOException;
+    void removeAllClients() throws IOException;
+    void removeAllEmployees() throws IOException;
+    void removeAllAdmins() throws IOException;
 }

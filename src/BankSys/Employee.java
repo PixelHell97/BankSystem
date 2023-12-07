@@ -1,10 +1,13 @@
 package BankSys;
 
+import java.util.Vector;
+
 public class Employee extends Person{
     private int id;
     protected double salary;
     static private int ID_Generator = 1;
 
+    public Employee() {}
     public Employee(String name, String password, double salary) {
         super(name, password);
         this.id = ID_Generator;
@@ -15,6 +18,7 @@ public class Employee extends Person{
     public int getId() {
         return id;
     }
+    public void setId(int id) { this.id = id; }
 
     public double getSalary() {
         return salary;
@@ -38,4 +42,5 @@ public class Employee extends Person{
         super.displayInfo();
         System.out.println("Salary: " + getSalary());
     }
+   static Vector<Employee> allEmployees;
 }

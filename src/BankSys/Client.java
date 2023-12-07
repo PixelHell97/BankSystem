@@ -1,10 +1,13 @@
 package BankSys;
 
+import java.util.Vector;
+
 public class Client extends Person{
     private int id;
     private double balance;
     static private int ID_Generator = 1;
 
+    public Client() {}
     public Client(String name, String password, double balance) {
         super(name, password);
         this.id = ID_Generator;
@@ -16,6 +19,7 @@ public class Client extends Person{
     public int getId() {
         return id;
     }
+    public void setId(int id) {this.id = id;}
 
     public double getBalance() {
         return balance;
@@ -67,4 +71,5 @@ public class Client extends Person{
         super.displayInfo();
         checkBalance();
     }
+    static Vector<Client> allClients;
 }
